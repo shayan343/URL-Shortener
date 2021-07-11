@@ -1,0 +1,14 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "Backend service to shorten long urls",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shayan343",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
