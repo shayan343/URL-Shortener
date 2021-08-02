@@ -1,10 +1,10 @@
 const {Sequelize, DataTypes} = require('sequelize')
 
 const db = new Sequelize({
-	dialect:'postgress',
-	database:'urlShortener',
+	dialect:'postgres',
+	database:'urlshortener',
 	username:'shayan343',
-	password: 'shayan343'
+	password:'shayan343'
 	
 })
 
@@ -14,7 +14,7 @@ const URLs = db.define('urls', {
 		type: DataTypes.BIGINT
 	},
 	code:{
-		type: DataTypes.String(7),
+		type: DataTypes.STRING(7),
 		unique: true
 	},
 	link: {
@@ -25,5 +25,5 @@ const URLs = db.define('urls', {
 
 module.exports = {
 	db,
-	URLS
+	URLs
 }

@@ -1,23 +1,23 @@
-const CHARACTERS =
+const ALPHABET =
   "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_";
 const CHAR_MAP = {};
 
-CHARACTERS.split("").forEach((v, i) => {
+ALPHABET.split("").forEach((v, i) => {
   CHAR_MAP[v] = i;
 });
 
-function intToRadix64(num) {
+function int2radix64(num) {
   let chars = [];
   let q = num;
   while (q > 0) {
     let r = q % 64;
-    chars.push(CHARACTERS.charAt(r));
+    chars.push(ALPHABET.charAt(r));
     q = parseInt(q / 64);
   }
   return chars.reverse().join("");
 }
 
-function radix64ToInt(str) {
+function radix64toint(str) {
   let chars = str.split("").reverse();
   let num = 0;
   for (let i = 0; i < chars.length; i++) {
@@ -27,6 +27,6 @@ function radix64ToInt(str) {
 }
 
 module.exports = {
-	intToRadix64,
-	radix64ToInt
+  int2radix64,
+  radix64toint,
 };
